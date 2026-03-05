@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelos HMTL</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.55;
+            margin: 16px;
+        }
+
+        section {
+            border: 1px solid #eee;
+            border-radius: 10px;
+            padding: 16px;
+            margin: 16px 0;
+        }
+
+        code {
+            background: #f5f5f5;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+
+        h1,
+        h2 {
+            margin-top: 0;
+        }
+
+        .nota {
+            color: #444;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section id="metadata">
+        <h2>1) Metadata Content</h2>
+        <p>Aparecem dentro de <code>&lt;head&gt;</code>, <code>&lt;title&gt;</code>, <code>&lt;link&gt;</code>,
+            <code>&lt;style&gt;</code>.
+        </p>
+        <ul>
+            <li>
+                <code>&lt;meta charset="UTF-8"&gt;</code>: define a codificação de caraceteres do documento, garantindo
+                caracteres especiais.
+            </li>
+            <li>
+                <code>&lt;meta name="viewport"...&gt;</code>: define a responsividade do site, ajustando para
+                dispositivos móveis.
+            </li>
+            <li>
+                <code>&lt;meta name="description"...&gt;</code>: fornece uma descrição do conteúdo da página para
+                mecanismos de busca.
+            </li>
+            <li>
+                <code>&lt;title&gt;</code>: define o título da página que aparece na aba do navegador.
+            </li>
+        </ul>
+    </section>
+    <section id="flow_content">
+        <h2>2) Flow Content</h2>
+        <p>Elementos comuns do corpo (Body): parágrafos, listas, imagens, links, etc.</p>
+        <p>Este parágrafo é um exemplo de flow content, assim como a lista abaixo: </p>
+        <ul>
+            <li>Item da Lista (Flow Content)</li>
+            <li>Outro Item.</li>
+        </ul>
+        <p>Links também aparecem no fluxo: <a href="https://example.com/">visitar o exemplo</a>.</p>
+    </section>
+
+    <section id="sectioning">
+        <h2>3) Sectioning Content</h2>
+        <p>Divide o elemento em parte lógicas: <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>,
+            <code>&lt;aside&gt;</code>, <code>&lt;nav&gt;</code>.
+        </p>
+        <article>
+            <h3>Artigo Independente</h3>
+            <p>Conteúdo que faz sentido por si só (ex: uma notícia, post de blog).</p>
+        </article>
+        <section>
+            <h3>Seção do Documento</h3>
+            <p>Parte de um cpnteúdo maior, pode ter subseções.</p>
+        </section>
+        <nav>
+            <h3>Navegação</h3>
+            <ul>
+                <li>
+                    <a href="#metadata">Metadada</a>
+                </li>
+                <li>
+                    <a href="#heading">Heading</a>
+                </li>
+                <li>
+                    <a href="#embedded">Embedded</a>
+                </li>
+            </ul>
+        </nav>
+        <aside>
+            <h3>Aside (lateral)</h3>
+            <p>Informações complementares (ex: biografia, notas, links extras).</p>
+        </aside>
+    </section>
+
+    <section id="heading">
+        <h2>4) Heading Content</h2>
+        <p>Títulos, subtítulos,subtítulos hierárquicos para organização e acessibilidade.</p>
+        <h1>Título Principal (H1)</h1>
+        <h2>Seção Importante (H2)</h2>
+        <h3>Subseção (H3)</h3>
+        <h4>Detalhe (H4)</h4>
+        <h5>Nota (H5)</h5>
+        <h6>Observação (H6)</h6>
+    </section>
+
+    <section id="phrasing">
+        <h2>5) Phrasing Content</h2>
+        <p>Conteúdo dentro do texto: ênfase, links com marcações inline, inputs.</p>
+        <p>Texto com <strong>negrito</strong>, <em>itálico</em>, <mark>destaque</mark>, e código inline
+            <code>&lt;span&gt;</code>
+        </p>
+        <p>Um link inline: <a href="https://example.com/">visitar o exemplo</a></p>
+        <label for="nome">Seu nome: </label>
+        <input type="text" id="nome" placeholder="Digite seu nome...">
+    </section>
+
+    <section id="embedded">
+        <h2>6) Embedded Content</h2>
+        <p>Conteúdo: imagens, vídeos, áudios, iframes.</p>
+        <img src="img/logo.png" alt="Logo do HTML">
+        <p><audio controls>Seu navegador não suporta o elemento de áudio</audio></p>
+        <br>
+        <video controls width="300">
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Seu navegador não suporta vídeo.
+        </video>
+
+        <p>Ifame pode ser bloqueado por alguns sites.</p>
+        <iframe src="https://example.com" width="320" height="180" title="exemplo"></iframe>
+    </section>
+
+    <section id="interactive">
+        <h2>7) Interactive Content</h2>
+        <p>Elementos de interação para o usuário.</p>
+        <a href="https://example.com">Sou um link clicável</a>
+        <br>
+        <button>Sou um botão</button>
+        <br>
+        <form>
+            <label for="email">E-mail: </label>
+            <input type="email" id="email" placeholder="Digite seu e-mail...">
+            <br>
+            <label for="nivel">Nível: </label>
+            <select id="nivel">
+                <option value="iniciante">Iniciante</option>
+                <option value="intermediario">Intermediário</option>
+                <option value="avancado">Avançado</option>
+            </select>
+        </form>
+        <details>
+            <summary>Clique para expandir</summary>
+            <p>Use label sempre associado ao campo de formulário.</p>
+        </details>
+    </section>
+</body>
+<footer>
+    <p>&copy; 2025 - Turma de Fundamentos de HTML5</p>
+</footer>
+
+</html>
